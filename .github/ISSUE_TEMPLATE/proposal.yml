@@ -1,0 +1,38 @@
+name: Proposal
+description: Propose public content or a future website requirement.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No site is implemented or deployed. Proposals do not authorize deployment or new services.
+        Do not include private data. Security reports: https://github.com/Yivas/cotilleo-convo-website/security/advisories/new
+  - type: textarea
+    id: task
+    attributes:
+      label: Audience and task
+      description: Describe who needs this content and what they should be able to understand or do.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed scope and boundaries
+      description: Include content needs, alternatives and privacy implications without assuming an approved design.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Evidence of success
+      description: Describe the reader journey or observable result that would verify the proposal.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and understand there is no deployed website yet.
+          required: true
+        - label: I removed sensitive data and this is not a private vulnerability report.
+          required: true

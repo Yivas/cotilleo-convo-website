@@ -1,0 +1,53 @@
+name: Problem report
+description: Report an observable problem in the current repository content.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        There is no implemented or deployed website yet.
+        Do not include credentials, private conversations, prompts, personal paths or operational configuration.
+        Sensitive reports belong at https://github.com/Yivas/cotilleo-convo-website/security/advisories/new
+  - type: input
+    id: baseline
+    attributes:
+      label: Document or commit
+      description: Identify the current content. No deployed site version exists yet.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Host and operating system
+      description: Include browser or renderer versions when relevant, or state not applicable.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include only a minimal sanitized example.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues.
+          required: true
+        - label: I understand there is no supported deployed baseline yet.
+          required: true
+        - label: I removed sensitive data and this is not a private vulnerability report.
+          required: true
